@@ -34,7 +34,9 @@ function App() {
 
   const addNewExpenseHandler = (newExpense) =>
     setExpenses((prevState) =>
-      prevState.concat(newExpense).sort((expense1, expense2) => expense2 - expense1)
+      prevState
+        .concat(newExpense)
+        .sort((expense1, expense2) => expense2 - expense1)
     );
 
   return (
